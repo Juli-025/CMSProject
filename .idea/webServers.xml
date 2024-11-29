@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1f9f834e-24b5-4127-be11-f7b5b5d3a737" name="CSWProject" url="http://cswproject.s2310456025.student.kwmhgb.at">
+        <fileTransfer rootFolder="/usr/home/uoydvm/public_html/cswproject" accessType="SFTP" host="dedi50.your-server.de" port="222" sshConfigId="42ce6047-591e-4f4a-a37f-649920f68ab6" sshConfig="CSWProject">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

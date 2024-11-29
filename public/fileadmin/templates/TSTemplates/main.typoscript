@@ -1,0 +1,17 @@
+page = PAGE
+page.typeNum = 0
+page.config.contentObjectExceptionHandler = 0
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    templateName = Index
+    templateRootPaths {
+        0 = fileadmin/templates/HTMLTemplates/Page/Templates
+    }
+    layoutRootPaths {
+        0 = fileadmin/templates/HTMLTemplates/Page/Layouts
+    }
+    partialRootPaths {
+        0 = fileadmin/templates/HTMLTemplates/Page/Partials
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="dedi50.your-server.de" id="42ce6047-591e-4f4a-a37f-649920f68ab6" port="222" customName="CSWProject" nameFormat="CUSTOM" username="uoydvm" useOpenSSHConfig="true">
+        <option name="customName" value="CSWProject" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

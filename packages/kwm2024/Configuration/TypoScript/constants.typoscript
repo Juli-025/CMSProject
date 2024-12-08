@@ -61,3 +61,7 @@ plugin.bootstrap_package.settings.scss {
 plugin.tx_news.view.twb5.templateRootPath = EXT:kwm2024/Resources/Private/Templates/News/
 plugin.tx_news.view.twb5.partialRootPath = EXT:kwm2024/Resources/Private/Partials/News/
 plugin.tx_news.view.twb5.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/News/
+
+plugin.tx_felogin_login.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/Login/
+plugin.tx_felogin_login.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/Login/
+plugin.tx_felogin_login.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/Login/

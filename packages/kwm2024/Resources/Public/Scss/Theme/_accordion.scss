@@ -1,0 +1,43 @@
+.accordion-header {
+  .accordion-button {
+    font-weight: bold;
+
+    &[aria-expanded="true"] {
+      background-color: #f7a739;
+      color: black;
+    }
+
+    &:hover,
+    &:focus {
+      background: none; // Entfernt Hover- oder Fokus-Overlay
+      box-shadow: none; // Entfernt Fokus-Schatten
+      background-color: #f7a739;
+    }
+  }
+}
+
+.accordion-item {
+  border-color: #df7c38;
+}
+.page-4 {
+  .accordion-content-item.accordion-content-media {
+    display: flex; // Flexbox-Layout
+    align-items: stretch; // Vertikale Dehnung
+    justify-content: stretch; // Horizontale Dehnung
+
+    .gallery-row,
+    .gallery-item.gallery-item-size-2 {
+      width: 100%; // Volle Breite des übergeordneten Containers
+      height: 100%; // Volle Höhe des übergeordneten Containers
+      display: flex; // Flexbox für korrekte Positionierung
+      align-items: center; // Vertikale Zentrierung (falls nötig)
+      justify-content: center; // Horizontale Zentrierung (falls nötig)
+
+      .image {
+        width: 100%; // Bild skaliert auf volle Breite
+        height: 100%; // Bild skaliert auf volle Höhe
+        object-fit: cover; // Verhindert Verzerrungen, indem das Seitenverhältnis beibehalten wird
+      }
+    }
+  }
+}

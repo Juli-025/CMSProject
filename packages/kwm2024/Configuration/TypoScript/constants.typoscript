@@ -65,3 +65,7 @@ plugin.tx_news.view.twb5.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/
 plugin.tx_felogin_login.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/Login/
 plugin.tx_felogin_login.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/Login/
 plugin.tx_felogin_login.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/Login/
+
+plugin.bootstrap_package_contentelements.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/ContentElements/
+plugin.bootstrap_package_contentelements.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/ContentElements/
+plugin.bootstrap_package_contentelements.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/ContentElements/

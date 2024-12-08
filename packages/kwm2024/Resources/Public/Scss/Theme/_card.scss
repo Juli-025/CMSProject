@@ -1,5 +1,5 @@
 
-.card {
+.news .card {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -7,12 +7,26 @@
   box-shadow: 1.5px 5px 6.5px rgba(0, 0, 0, 0.39);
   border: 0;
   border-radius: 10px;
+  min-height: 300px;
+  margin-bottom: 10px;
 
   .card-title {
     font-weight: bold;
     text-align: center;
 
   }
+}
+
+.news .more {
+  color: black !important;
+  background-color: #f7a739;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.news .more:hover {
+  background-color: #df7c38;
 }
 
 .row {

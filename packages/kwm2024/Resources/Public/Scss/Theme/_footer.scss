@@ -5,8 +5,15 @@
 
 .footer-section .image {
 
-    width: 150px;
+    width: 190px;
     height: auto;
+}
+
+.footer-section-content-column-middle {
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center; /* Zentriert horizontal */
+  align-items: center; /* Zentriert vertikal */
+  height: 100%; /* Sicherstellen, dass der Container die volle Höhe einnimmt */
 }
 
 .footer-section .frame-inner {
@@ -55,3 +62,4 @@
   display: none !important;
 
 }
+

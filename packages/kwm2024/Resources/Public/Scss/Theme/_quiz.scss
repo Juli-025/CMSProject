@@ -1,0 +1,42 @@
+.tx-fp-masterquiz .card{
+  border: none;
+}
+
+.tx-fp-masterquiz .mx-auto h4{
+  font-weight: bold;
+}
+
+.quiz-question-buttons {
+  padding-left: 20px;
+}
+
+
+.tx-fp-masterquiz .quiz-radiobox {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+
+//doesn`t work like it should...
+.tx-fp-masterquiz .btn-primary::after {
+  content: " Weiter >"; // Der neue Text, der angezeigt werden soll
+  display: inline-block; // Stellt sicher, dass es angezeigt wird
+  color: black; // Optional: Stil des neuen Textes
+  font-weight: bold; // Optional: Hervorhebung
+  text-decoration: underline;
+}
+
+.tx-fp-masterquiz .btn-primary {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: transparent; // Versteckt den ursprünglichen Text
+}
+
+.tx-fp-masterquiz .btn-primary:hover {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: transparent; // Versteckt den ursprünglichen Text
+}
+

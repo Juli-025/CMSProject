@@ -20,9 +20,21 @@
 .news .more {
   color: black !important;
   background-color: #f7a739;
-  padding: 10px;
+  padding: 10px 30px;
   border-radius: 10px;
+  text-decoration: none;
 
+}
+
+.news .card .news-img-wrap {
+  width: 100%; /* Stellt sicher, dass es die gesamte Breite der Card einnimmt */
+  display: block; /* Falls notwendig, um es als Block-Element zu setzen */
+}
+
+.news .card .news-img-wrap img {
+  width: 100%; /* Das Bild füllt die Breite des Wrappers */
+  height: auto; /* Beibehaltung des Seitenverhältnisses */
+  object-fit: cover; /* Optional, um das Bild schön zu skalieren */
 }
 
 .news .more:hover {

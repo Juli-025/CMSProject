@@ -35,9 +35,17 @@
   text-decoration: underline;
 }
 
+.footer-section strong:hover {
+  color: #d15b38;
+}
+
 .footer-section .element-header a {
   color: black;
   font-weight: bold;
+}
+
+.footer-section .element-header a:hover {
+  color: #d15b38;
 }
 
  .footer-section-meta {

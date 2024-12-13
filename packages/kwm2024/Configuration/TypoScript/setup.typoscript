@@ -9,6 +9,7 @@
 ##############
 page {
     includeCSS {
+        swiper = https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css
         theme = EXT:kwm2024/Resources/Public/Scss/Theme/theme.scss
     }
 
@@ -25,6 +26,7 @@ page {
     }
 
     includeJSFooter {
+        swiper = https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js
         kwm2024_scripts = EXT:kwm2024/Resources/Public/JavaScript/Dist/scripts.js
     }
 }

@@ -14,3 +14,6 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['kwm2024'] = 'EXT:kwm2024/Configur
 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:news/Resources/Private/Language/locallang.xlf'][] = 'EXT:kwm2024/Resources/Private/Language/locallang.xlf';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:news/Resources/Private/Language/locallang.xlf'][] = 'EXT:kwm2024/Resources/Private/Language/de.locallang.xlf';
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:cms-felogin/Resources/Private/Language/locallang.xlf'][] = 'EXT:kwm2024/Resources/Private/Language/locallang.xlf';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['de']['EXT:cms-felogin/Resources/Private/Language/locallang.xlf'][] = 'EXT:kwm2024/Resources/Private/Language/de.locallang.xlf';

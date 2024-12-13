@@ -10,6 +10,10 @@
                 	<target>Mehr erfahren</target>
 
              </trans-unit>
+
+             <trans-unit id="login" resname="login">
+             			<target>einloggen</target>
+             </trans-unit>
         </body>
     </file>
 </xliff>

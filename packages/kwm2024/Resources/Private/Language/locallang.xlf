@@ -9,6 +9,9 @@
             <trans-unit id="more-link" xml:space="preserve">
                     <source>Read more</source>
             </trans-unit>
+            <trans-unit id="login" resname="login">
+            				<source>Login</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

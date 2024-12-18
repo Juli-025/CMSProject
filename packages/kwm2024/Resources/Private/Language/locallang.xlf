@@ -10,7 +10,22 @@
                     <source>Read more</source>
             </trans-unit>
             <trans-unit id="login" resname="login">
-            				<source>Login</source>
+            		<source>Login</source>
+            </trans-unit>
+            <trans-unit id="logout-head" resname="logout-head">
+                      <source>Hallo</source>
+            </trans-unit>
+            <trans-unit id="exlamation" resname="exlamation">
+                      <source>!</source>
+            </trans-unit>
+            <trans-unit id="text-notice" resname="text-notice">
+                       <source>Have you already seen the latest news?</source>
+            </trans-unit>
+            <trans-unit id="logout" resname="logout">
+                      <source>logout</source>
+            </trans-unit>
+            <trans-unit id="login-head" resname="login-head">
+                      <source>Login</source>
             </trans-unit>
         </body>
     </file>

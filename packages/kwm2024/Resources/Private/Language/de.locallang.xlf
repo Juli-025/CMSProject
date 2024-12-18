@@ -14,6 +14,21 @@
              <trans-unit id="login" resname="login">
              			<target>einloggen</target>
              </trans-unit>
+             <trans-unit id="logout-head" resname="logout-head">
+                      <target>Hallo </target>
+             </trans-unit>
+             <trans-unit id="exlamation" resname="exlamation">
+                       <target>!</target>
+             </trans-unit>
+             <trans-unit id="text-notice" resname="text-notice">
+                       <target>Hast du schon die neusten Artikel gesehn?</target>
+             </trans-unit>
+             <trans-unit id="logout" resname="logout">
+             		   <target>ausloggen</target>
+             </trans-unit>
+             <trans-unit id="login-head" resname="login-head">
+                        <target>Login</target>
+             </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,11 @@
+prototypes:
+  standard:
+    formElementsDefinition:
+      Form:
+        renderingOptions:
+          templateRootPaths:
+            50: 'EXT:my_site_package/Resources/Private/Templates/Form/Frontend/'
+          partialRootPaths:
+            50: 'EXT:my_site_package/Resources/Private/Partials/Form/Frontend/'
+          layoutRootPaths:
+            50: 'EXT:my_site_package/Resources/Private/Layouts/Form/Frontend/'

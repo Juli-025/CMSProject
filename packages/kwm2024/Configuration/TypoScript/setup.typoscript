@@ -29,4 +29,38 @@ page {
         swiper = https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js
         kwm2024_scripts = EXT:kwm2024/Resources/Public/JavaScript/Dist/scripts.js
     }
+
+    10 {
+        dataProcessor{
+            10{
+                level = 1
+            }
+        }
+    }
 }
+
+/*plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            # register your own additional configuration
+            # choose a number higher than 10 (10 is reserved)
+            120 = EXT:my_site_package/Configuration/Form/CustomFormSetup.yaml
+        }
+    }
+}
+*/
+lib.maskContentElement {
+    templateRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
+    }
+
+    partialRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
+    }
+
+    layoutRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
+    }
+}
+
+

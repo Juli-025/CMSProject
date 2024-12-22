@@ -4,7 +4,7 @@
  * Licensed under the GPL-2.0-or-later license
  */
 console.log("WE LOVE TYPO3");
-const swiper = new Swiper('.swiper', {
+const maskSwiper = new Swiper('.mask-swiper', {
     // Optional parameters
 
     loop: true,
@@ -20,11 +20,6 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-
     autoplay: {
         delay: 10000,
     },
@@ -36,3 +31,23 @@ const swiper = new Swiper('.swiper', {
 
 
 });
+
+
+const newsSwiper = new Swiper('.news-swiper', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    slidesPerView: 3,
+    centeredSlides: true,
+
+});
+
+
+

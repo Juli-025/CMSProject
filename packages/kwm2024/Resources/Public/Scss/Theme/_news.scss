@@ -1,0 +1,14 @@
+
+.news .swiper-button-next {
+  right: -10px; /* Abstand vom rechten Rand des Containers */
+}
+
+.news .swiper-button-prev {
+  left: -10px; /* Abstand vom linken Rand des Containers */
+}
+
+.news .swiper-wrapper {
+  padding-left: 10px;
+  justify-content: space-between;
+}
+

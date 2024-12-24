@@ -71,5 +71,7 @@ plugin.bootstrap_package_contentelements.view.partialRootPath = EXT:kwm2024/Reso
 plugin.bootstrap_package_contentelements.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/ContentElements/
 
 plugin.tx_fpmasterquiz.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/Quiz/
-plugin.tx_fpmasterquiz.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/Quiz/}
+plugin.tx_fpmasterquiz.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/Quiz/
 plugin.tx_fpmasterquiz.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/Quiz/
+
+

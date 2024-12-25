@@ -1,0 +1,52 @@
+
+.navactive {
+  font-weight: bold;
+  color: black;
+}
+
+.inactive {
+  color: black;
+
+}
+
+.header_nav {
+  margin-right: 145px;
+  display: flex; /* Aktiviert Flexbox */
+  gap: 10px; /* Abstand zwischen den Elementen */
+  align-items: center; /* Vertikale Ausrichtung */
+}
+
+.container-mainnavigation {
+  margin-left: 130px;
+  margin-right: 640px;
+  background-color: $primary;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+.nav-item .active {
+  background-color: $tertiary;
+  border-radius: 10px;
+}
+
+.nav-item:hover {
+  background-color: $secondary;
+  border-radius: 10px;
+}
+
+.nav-item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header_nav a {
+  text-decoration: none; /* Entfernt die Unterstreichung von Links */
+  color: inherit; /* Beibehaltung der Schriftfarbe */
+}
+
+@media (max-width: 600px) {
+  .header_nav {
+    flex-direction: column; /* Stellt die Elemente vertikal dar */
+    gap: 5px; /* Geringerer Abstand zwischen den Elementen */
+  }
+}

@@ -41,3 +41,35 @@
     }
   }
 }
+
+.large-image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.large-image {
+  max-width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+}

@@ -2,7 +2,6 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/packages/kwm2024/Classes" isTestSource="false" packagePrefix="Fhooe\Kwm2024\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/b13/container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bacon/bacon-qr-code" />
@@ -114,6 +113,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/html-sanitizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3fluid/fluid" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nitsan/ns-gallery" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,20 +1,47 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
 
-<f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
-<f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
-<f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
-<header id="page-header" class="{headerClass}">
-    <div class="container container-mainnavigation">
+    <f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}
+    </f:variable>
+    <f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
+    <f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:'
+        navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}
+    </f:variable>
+    <header id="page-header" class="{headerClass}">
 
-        <f:if condition="{mainnavigation}">
-            <f:render partial="Header/Toggle" arguments="{_all}" />
-            <nav aria-label="{f:translate(key: 'main-navigation.label', extensionName: 'bootstrap_package')}" id="mainnavigation" class="collapse navbar-collapse">
-                <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
-                <f:render partial="Navigation/MainNavigation" arguments="{_all}" />
-                <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
-            </nav>
-        </f:if>
-    </div>
-</header>
+        <div class="container container-mainnavigation">
+            <f:if condition="{mainnavigation}">
+                <f:render partial="Header/Toggle" arguments="{_all}"/>
+                <nav aria-label="{f:translate(key: 'main-navigation.label', extensionName: 'bootstrap_package')}"
+                     id="mainnavigation" class="collapse navbar-collapse">
+                    <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}"/>
+                    <f:render partial="Navigation/MainNavigation" arguments="{_all}"/>
+                    <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}"/>
+                </nav>
+            </f:if>
+        </div>
+
+        <div class="header_nav">
+            <f:for each="{languagenavigation}" as="item">
+                <div
+                    class="{f:if(condition: item.active, then: 'active navactive')} {f:if(condition: item.available, else: 'inactive')}">
+                    <f:if condition="{item.available}">
+                        <f:then>
+                            <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                                <span>{item.navigationTitle}</span>
+                            </a>
+                        </f:then>
+
+                        <f:else>
+                            <span>{item.navigationTitle}</span>
+                        </f:else>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+
+
+    </header>
 
 </html>

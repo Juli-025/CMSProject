@@ -20,10 +20,12 @@ page {
         file = EXT:kwm2024/Resources/Public/Icons/favicon.ico
     }
     fluidtemplate {
-        layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:kwm2024/Resources/Private/Partials/Page/
-        templateRootPath = EXT:kwm2024/Resources/Private/Templates/Page/
+        layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/Page/Navigation
+        partialRootPath = EXT:kwm2024/Resources/Private/Partials/Page/Navigation
+        templateRootPath = EXT:kwm2024/Resources/Private/Templates/Page/Navigation
     }
+
+
 }
 
 
@@ -66,9 +68,10 @@ plugin.tx_felogin_login.view.templateRootPath = EXT:kwm2024/Resources/Private/Te
 plugin.tx_felogin_login.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/Login/
 plugin.tx_felogin_login.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/Login/
 
-plugin.bootstrap_package_contentelements.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/ContentElements/
-plugin.bootstrap_package_contentelements.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/ContentElements/
-plugin.bootstrap_package_contentelements.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/ContentElements/
+plugin.bootstrap_package_contentelements.view.layoutRootPath = EXT:kwm2024/Resources/Private/Layouts/
+plugin.bootstrap_package_contentelements.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/
+plugin.bootstrap_package_contentelements.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/
+
 
 plugin.tx_fpmasterquiz.view.templateRootPath = EXT:kwm2024/Resources/Private/Templates/Quiz/
 plugin.tx_fpmasterquiz.view.partialRootPath = EXT:kwm2024/Resources/Private/Partials/Quiz/

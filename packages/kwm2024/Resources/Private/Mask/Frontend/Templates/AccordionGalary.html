@@ -2,18 +2,17 @@
 <f:layout name="Default"/>
 <f:section name="Main">
     <f:if condition="{data.tx_mask_acc}">
-        <f:variable name="activeElement" value="{data.pi_flexform.default_element}"/>
         <div class="accordion" id="accordion-{data.uid}">
             <f:for each="{data.tx_mask_acc}" as="data_item" iteration="iteration">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="accordion-heading-{data.uid}-{data_item.uid}">
                         <button
-                            class="accordion-button{f:if(condition: '{activeElement} == {data_item.uid}', else: ' collapsed')}"
+                            class="accordion-button{f:if(condition: '{iteration.index == 1}', else: ' collapsed')}"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#accordion-{data.uid}-{data_item.uid}"
                             data-bs-parent="#accordion-{data.uid}"
-                            aria-expanded="{f:if(condition: '{activeElement} == {data_item.uid}', then: 'true', else: 'false')}"
+                            aria-expanded="{f:if(condition: '{iteration.index == 1}', then: 'true', else: 'false')}"
                             aria-controls="accordion-{data.uid}-{data_item.uid}"
                         >
                             {data_item.header}
@@ -21,14 +20,11 @@
                     </h2>
                     <div
                         id="accordion-{data.uid}-{data_item.uid}"
-                        class="accordion-collapse collapse{f:if(condition: '{activeElement} == {data_item.uid}', then: ' show')}"
+                        class="accordion-collapse collapse{f:if(condition: '{iteration.index == 1}', then: ' show')}"
                         aria-labelledby="accordion-heading-{data.uid}-{data_item.uid}"
                         data-bs-parent="#accordion-{data.uid}"
                     >
-
                         <div class="accordion-body">
-                            <!-- Inhalte des aktuellen Items -->
-                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
 
                             <!-- Text -->
                             <f:if condition="{data_item.tx_mask_text}">
@@ -37,38 +33,84 @@
 
                             <!-- Bilder -->
                             <f:if condition="{data_item.tx_mask_img}">
-                                <f:for each="{data_item.tx_mask_img}" as="file">
-                                    <f:media file="{file}" width="200"/>
-                                    {file.description}
-                                </f:for>
-                            </f:if>
-                            <f:comment>
                                 <!-- Großes Bild -->
                                 <div class="large-image-container">
-                                    <img class="large-image"
-                                         src="{f:uri.image(image: data_item.tx_mask_img.0, width: '800')}"
-                                         alt="Large image">
+                                    <img id="large-image-{data_item.uid}" class="large-image"
+                                         src="{f:uri.image(image: data_item.tx_mask_img.0)}" alt="Großes Bild">
                                 </div>
 
-                                <!-- Thumbnails -->
-                                <div class="thumbnails">
-                                    <f:for each="{data_item.tx_mask_img}" as="file">
-                                        <f:if condition="{file}">
-                                            <img class="thumbnail"
-                                                 src="{f:uri.image(image: file, width: '200')}"
-                                                 alt="{file.alternative}"
-                                                 data-large-image-src="{f:uri.image(image: file, width: '800')}">
-                                        </f:if>
+                                <!-- Kleine Bilder -->
+                                <div class="small-images">
+                                    <f:for each="{data_item.tx_mask_img}" as="file" iteration="imgIteration">
+                                        <img
+                                            src="{f:uri.image(image: file)}"
+                                            alt="Kleines Bild {imgIteration.index}"
+                                            class="small-image{f:if(condition: '{imgIteration.index == 1}', then: ' active')}"
+                                            data-large-image-src="{f:uri.image(image: file)}"
+                                            onclick="updateLargeImage(this, 'large-image-{data_item.uid}')"
+                                        />
                                     </f:for>
                                 </div>
-                            </f:comment>
-
-
+                            </f:if>
                         </div>
                     </div>
                 </div>
             </f:for>
         </div>
     </f:if>
+
+    <!-- JavaScript -->
+    <script>
+        function updateLargeImage(smallImage, largeImageId) {
+            const largeImage = document.getElementById(largeImageId);
+            const allSmallImages = smallImage.parentNode.querySelectorAll('.small-image');
+
+            // Update the large image source
+            largeImage.src = smallImage.getAttribute('data-large-image-src');
+
+            // Remove active class from all small images
+            allSmallImages.forEach(img => img.classList.remove('active'));
+
+            // Add active class to the clicked small image
+            smallImage.classList.add('active');
+        }
+    </script>
+
+    <!-- CSS -->
+    <style>
+        .large-image-container {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .large-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border: 2px solid #ccc;
+        }
+
+        .small-images {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .small-image {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .small-image.active {
+            border-color: #007bff;
+        }
+
+        .small-image:hover {
+            border-color: #0056b3;
+        }
+    </style>
 </f:section>
 </html>

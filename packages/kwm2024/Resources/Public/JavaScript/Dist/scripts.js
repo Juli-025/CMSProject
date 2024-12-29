@@ -49,25 +49,6 @@ const newsSwiper = new Swiper('.news-swiper', {
 
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Alle Thumbnail-Bilder holen
-    const thumbnails = document.querySelectorAll('.thumbnail');
 
-    // Großes Bild holen
-    const largeImage = document.querySelector('.large-image');
-
-    // Klick-Event für jedes Thumbnail
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function () {
-            // Großes Bild aktualisieren
-            const largeImageSrc = this.getAttribute('data-large-image-src');
-            largeImage.setAttribute('src', largeImageSrc);
-
-            // Aktiven Rahmen setzen
-            thumbnails.forEach(tn => tn.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-});
 
 

@@ -65,4 +65,14 @@ lib.maskContentElement {
 
 
 
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            # register your own additional configuration
+            # choose a number higher than 10 (10 is reserved)
+            120 = EXT:kwm2024/Configuration/Form/CustomFormSetup.yaml
+        }
+    }
+}
+
 

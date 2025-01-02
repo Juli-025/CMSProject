@@ -1,0 +1,111 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <f:if condition="{data.tx_mask_item}">
+        <div class="accordion" id="accordion-{data.uid}">
+            <f:for each="{data.tx_mask_item}" as="data_item" iteration="iteration">
+                <div class="accordion-item">
+                    <!-- Accordion Header -->
+                    <h2 class="accordion-header" id="accordion-heading-{data.uid}-{iteration.index}">
+                        <button
+                            class="accordion-button{f:if(condition: iteration.isFirst, then: '', else: ' collapsed')}"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordion-{data.uid}-{iteration.index}"
+                            aria-expanded="{f:if(condition: iteration.isFirst, then: 'true', else: 'false')}"
+                            aria-controls="accordion-{data.uid}-{iteration.index}">
+                            <f:if condition="{data_item.tx_mask_title}">
+                                {data_item.tx_mask_title}
+                            </f:if>
+                        </button>
+                    </h2>
+
+                    <!-- Accordion Body -->
+                    <div
+                        id="accordion-{data.uid}-{iteration.index}"
+                        class="accordion-collapse collapse{f:if(condition: iteration.isFirst, then: ' show', else: '')}"
+                        aria-labelledby="accordion-heading-{data.uid}-{iteration.index}"
+                        data-bs-parent="#accordion-{data.uid}">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <div class="row mb-4">
+                                    <!-- Text -->
+                                    <f:if condition="{data_item.tx_mask_text}">
+                                        <div class="col-12">
+                                            <p>{data_item.tx_mask_text -> f:format.nl2br()}</p>
+                                        </div>
+                                    </f:if>
+
+                                    <!-- Large Image -->
+                                    <div class="col-12 mb-3">
+                                        <div id="large-image-container-{iteration.index}">
+                                            <f:if condition="{data_item.tx_mask_small_img}">
+                                                <f:for each="{data_item.tx_mask_small_img}" as="file" iteration="imgIteration">
+                                                    <f:if condition="{imgIteration.isFirst}">
+                                                        <f:media file="{file}" width="800" id="large-image-{iteration.index}" />
+                                                    </f:if>
+                                                </f:for>
+                                            </f:if>
+                                        </div>
+                                    </div>
+
+                                    <!-- Small Images in Grid -->
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <f:for each="{data_item.tx_mask_small_img}" as="file" iteration="imgIteration">
+                                                <div class="col-2">
+                                                    <a href="javascript:void(0);"
+                                                       class="small-image-link"
+                                                       data-large-image="{f:uri.image(image: file)}">
+                                                        <f:media file="{file}" width="200" />
+                                                    </a>
+                                                </div>
+                                            </f:for>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+
+    <!-- JavaScript for Image Switching -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordions = document.querySelectorAll(".accordion-item");
+
+            accordions.forEach((accordion, index) => {
+                const smallImageLinks = accordion.querySelectorAll(".small-image-link");
+                const largeImage = accordion.querySelector(`#large-image-container-${index + 1} img`);
+
+                smallImageLinks.forEach(link => {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault();
+
+                        smallImageLinks.forEach(img => img.classList.remove("active"));
+                        this.classList.add("active");
+
+                        const newLargeImageSrc = this.getAttribute("data-large-image");
+                        if (largeImage) {
+                            largeImage.src = newLargeImageSrc;
+                        } else {
+                            console.error("Large image not found:", `#large-image-${index}`);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- CSS for Styling -->
+    <style>
+        .small-image-link.active {
+            border: 3px solid #007bff;
+            border-radius: 5px;
+        }
+    </style>
+</f:section>
+</html>

@@ -43,7 +43,22 @@
 .news-navigation li {
   flex: 1;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  margin: 20px;
 
+}
+
+
+.swiper-button-prev {
+  left: 0; /* Links ausgerichtet */
+}
+
+.swiper-button-next {
+  right: 0; /* Rechts ausgerichtet */
+}
+
+//article arrows
 .news-navigation li.news-prev {
   text-align: left;
 }

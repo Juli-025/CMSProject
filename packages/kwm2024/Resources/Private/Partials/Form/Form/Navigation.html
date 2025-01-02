@@ -1,19 +1,54 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
-asdf
--{form.currentPage.index}-{form.formDefinition.pages -> f:count()}-
-<nav class="{form.renderingOptions.formNavigation.navigationClassAttribute}" aria-label="{form.renderingOptions.formNavigation.navigationAriaLabelAttribute}">
-    <f:if condition="{form.previousPage}">
-        <f:form.button property="__currentPage" value="{form.previousPage.index}" formnovalidate="formnovalidate" class="{form.renderingOptions.formNavigation.btnPreviousClassAttribute}">{formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty: 'previousButtonLabel')}</f:form.button>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<!-- Fortschrittsbalken -->
+<div class="contact-section">
+    <f:if condition="{form.formDefinition.pages}">
+        <f:variable name="totalPages" value="{form.formDefinition.pages -> f:count()}"/>
+        <f:variable name="currentPageIndex" value="{form.currentPage.index + 1}"/>
+        <f:variable name="progressPercentage" value="{currentPageIndex / totalPages * 100}"/>
+
+        <div class="progress mb-4" role="progressbar" aria-label="Form Progress"
+             aria-valuemin="0" aria-valuemax="100"
+             aria-valuenow="{progressPercentage -> f:format.number(decimals: 0)}">
+            <div class="progress-bar"
+                 style="width: {progressPercentage -> f:format.number(decimals: 0)}%;">
+                {progressPercentage -> f:format.number(decimals: 0)}%
+            </div>
+        </div>
     </f:if>
-    <f:if condition="{form.nextPage}">
-        <f:then>
-            <f:form.button property="__currentPage" value="{form.nextPage.index}" class="{form.renderingOptions.formNavigation.btnNextClassAttribute}">{formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty: 'nextButtonLabel')}</f:form.button>
-        </f:then>
-        <f:else>
-            <f:form.button property="__currentPage" value="{form.pages -> f:count()}" class="{form.renderingOptions.formNavigation.btnSubmitClassAttribute}">
-                {formvh:translateElementProperty(element: form, renderingOptionProperty: 'submitButtonLabel')}
+</div>
+
+<!-- Navigation -->
+<nav class="{form.renderingOptions.formNavigation.navigationClassAttribute}"
+     aria-label="{form.renderingOptions.formNavigation.navigationAriaLabelAttribute}">
+    <div class="contact-section">
+
+
+        <f:if condition="{form.previousPage}">
+            <f:form.button property="__currentPage" value="{form.previousPage.index}" formnovalidate="formnovalidate" class="btn-custom">
+                <i class="fas fa-arrow-left"></i> {formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty:
+                'previousButtonLabel')}
             </f:form.button>
-        </f:else>
-    </f:if>
+        </f:if>
+
+        <f:if condition="{form.nextPage}">
+            <f:then>
+                <f:form.button property="__currentPage" value="{form.nextPage.index}" class="btn-custom btn-next">
+                    {formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty:
+                    'nextButtonLabel')} <i class="fas fa-arrow-right"></i>
+                </f:form.button>
+            </f:then>
+            <f:else>
+                <f:form.button property="__currentPage" value="{form.pages -> f:count()}" class="btn-custom">
+                    {formvh:translateElementProperty(element: form, renderingOptionProperty: 'submitButtonLabel')} <i class="fas fa-arrow-right"></i>
+                </f:form.button>
+            </f:else>
+        </f:if>
+
+
+
+    </div>
 </nav>
+
 </html>

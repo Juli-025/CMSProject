@@ -4,8 +4,8 @@ prototypes:
       Form:
         renderingOptions:
           templateRootPaths:
-            50: 'EXT:my_site_package/Resources/Private/Templates/Form/Frontend/'
+            50: 'EXT:kwm2024/Resources/Private/Templates/Form/'
           partialRootPaths:
-            50: 'EXT:my_site_package/Resources/Private/Partials/Form/Frontend/'
+            50: 'EXT:kwm2024/Resources/Private/Partials/Form/'
           layoutRootPaths:
-            50: 'EXT:my_site_package/Resources/Private/Layouts/Form/Frontend/'
+            50: 'EXT:kwm2024/Resources/Private/Layouts/Form/'

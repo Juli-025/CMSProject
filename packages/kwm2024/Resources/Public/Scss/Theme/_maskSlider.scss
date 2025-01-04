@@ -10,20 +10,40 @@
 
 .swiper-button-prev {
   --swiper-navigation-color: #000000;
-  --swiper-navigation-size: 35px;
+  --swiper-navigation-size: 30px;
   /*width: 75px; /* Durchmesser des Kreises
   height: 65px;
   border-radius: 50%; /* Macht das Element rund
   border: 3px solid black; /* Optional: Rand */
+  border: 2px solid $color_black; /* Dickeren Kreisrand */
+  border-radius: 50%; /* Kreisig machen */
+  padding: 20px; /* Inneren Abstand des Kreises */
+  background-color: white;
+}
 
+.swiper-button-prev:hover {
+  --swiper-navigation-color: #df7c38;
+  border: 2px solid $secondary; /* Dickeren Kreisrand */
 }
 
 .swiper-button-next {
   --swiper-navigation-color: #000000;
-  --swiper-navigation-size: 35px;
+  --swiper-navigation-size: 30px;
+  border: 2px solid $color_black; /* Dickeren Kreisrand */
+  border-radius: 50%; /* Kreisig machen */
+  padding: 20px; /* Inneren Abstand des Kreises */
+  background-color: white;
+}
+
+.swiper-button-next:hover {
+  --swiper-navigation-color: #df7c38;
+  border: 2px solid $secondary; /* Dickeren Kreisrand */
 }
 
 .swiper-pagination {
   --swiper-pagination-color: #000000;
+}
 
+.swiper-pagination-bullet:hover {
+  --swiper-pagination-color: #df7c38;
 }

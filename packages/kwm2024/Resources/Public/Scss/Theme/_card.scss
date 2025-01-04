@@ -20,7 +20,7 @@
 
 .news .more {
   color: black !important;
-  background-color: #f7a739;
+  background-color: $primary;
   padding: 10px 30px;
   border-radius: 10px;
   text-decoration: none;
@@ -40,7 +40,7 @@
 }
 
 .news .more:hover {
-  background-color: #df7c38;
+  background-color: $primary;
 }
 
 .row {

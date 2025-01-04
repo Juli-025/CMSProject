@@ -17,7 +17,7 @@
 }
 
 .footer-section .frame-inner {
-  color: black ;
+  color: $color_black ;
 
 }
 
@@ -31,12 +31,12 @@
 }
 
 .footer-section strong {
-  color: black;
+  color: $color_black;
   text-decoration: underline;
 }
 
 .footer-section strong:hover {
-  color: #d15b38;
+  color: $tertiary;
 }
 
 .footer-section .element-header a {
@@ -45,7 +45,7 @@
 }
 
 .footer-section .element-header a:hover {
-  color: #d15b38;
+  color: $tertiary;
 }
 
  .footer-section-meta {

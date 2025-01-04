@@ -26,13 +26,13 @@ h2 {
 
 //buttons from swiper
 .fa-arrow-left {
-  border: 2px solid #000; /* Dickeren Kreisrand */
+  border: 2px solid $color_black; /* Dickeren Kreisrand */
   border-radius: 50%; /* Kreisig machen */
   padding: 4px; /* Inneren Abstand des Kreises */
 }
 
 .fa-arrow-right {
-  border: 2px solid #000; /* Dickeren Kreisrand */
+  border: 2px solid $color_black; /* Dickeren Kreisrand */
   border-radius: 50%; /* Kreisig machen */
   padding: 4px; /* Inneren Abstand des Kreises */
 }
@@ -54,7 +54,7 @@ h2 {
   text-decoration: underline; /* Unterstreicht den Text entfernen */
   gap: 8px; /* Abstand zwischen Text und Pfeil */
   cursor: pointer;
-  color: #000; /* Schwarze Textfarbe */
+  color: $color_black; /* Schwarze Textfarbe */
 }
 
 .btn-custom:hover {
@@ -62,7 +62,7 @@ h2 {
 }
 
 .btn-custom i {
-  border: 2px solid #000; /* Kreisrand */
+  border: 2px solid $color_black; /* Kreisrand */
   border-radius: 50%; /* Kreisig machen */
   padding: 4px; /* Inneren Abstand des Kreises */
   width: 25px;

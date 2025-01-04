@@ -29,27 +29,29 @@
                         <div class="accordion-body">
                             <div class="container">
                                 <div class="row mb-4">
+
                                     <!-- Text -->
-                                    <f:if condition="{data_item.tx_mask_text}">
+                                    <f:if condition="{data_item.tx_mask_text_img}">
                                         <div class="col-12">
-                                            <p>{data_item.tx_mask_text -> f:format.nl2br()}</p>
+                                            <p>{data_item.tx_mask_text_img -> f:format.html()}</p>
                                         </div>
                                     </f:if>
 
                                     <!-- Small Images in Grid -->
                                     <div class="col-12">
-                                        <div class="row small-image-container">
+                                        <div class="row small-image-container text-center">
                                             <f:for each="{data_item.tx_mask_small_img}" as="file" iteration="imgIteration">
-                                                <div class="col-2" >
+                                                <div class="col-6 col-md-4 col-lg-2 d-flex">
                                                     <a href="javascript:void(0);"
                                                        class="small-image-link"
                                                        data-large-image="{f:uri.image(image: file)}">
-                                                        <f:media file="{file}" width="200" class="small-image"/>
+                                                        <f:media file="{file}" width="200" class="small-image img-fluid"/>
                                                     </a>
                                                 </div>
                                             </f:for>
                                         </div>
                                     </div>
+
 
                                     <!-- Large Image -->
                                     <div class="col-12 mb-3">
@@ -71,11 +73,6 @@
             </f:for>
         </div>
     </f:if>
-
-    <!-- JavaScript for Image Switching -->
-    <script>
-
-    </script>
 
 </f:section>
 </html>

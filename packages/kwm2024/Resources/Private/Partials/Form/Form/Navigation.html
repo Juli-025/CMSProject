@@ -27,7 +27,7 @@
 
         <f:if condition="{form.previousPage}">
             <f:form.button property="__currentPage" value="{form.previousPage.index}" formnovalidate="formnovalidate" class="btn-custom">
-                <i class="fas fa-arrow-left"></i> {formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty:
+                <i class="fas fa-chevron-left"></i></i> {formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty:
                 'previousButtonLabel')}
             </f:form.button>
         </f:if>
@@ -36,12 +36,12 @@
             <f:then>
                 <f:form.button property="__currentPage" value="{form.nextPage.index}" class="btn-custom btn-next">
                     {formvh:translateElementProperty(element: form.currentPage, renderingOptionProperty:
-                    'nextButtonLabel')} <i class="fas fa-arrow-right"></i>
+                    'nextButtonLabel')} <i class="fas fa-chevron-right"></i>
                 </f:form.button>
             </f:then>
             <f:else>
                 <f:form.button property="__currentPage" value="{form.pages -> f:count()}" class="btn-custom">
-                    {formvh:translateElementProperty(element: form, renderingOptionProperty: 'submitButtonLabel')} <i class="fas fa-arrow-right"></i>
+                    {formvh:translateElementProperty(element: form, renderingOptionProperty: 'submitButtonLabel')}<i class="fas fa-chevron-right"></i>
                 </f:form.button>
             </f:else>
         </f:if>

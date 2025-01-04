@@ -135,15 +135,7 @@
                     </ul>
                 </div>
             </div>
-            <script>
-                document.addEventListener('click', function(e) {
-                    // Prüfen, ob der geklickte Link ein Vor-/Zurück-Link ist
-                    if (e.target.closest('.news-prev a, .news-next a')) {
-                        e.preventDefault(); // Verhindert den Standard-Link-Aufruf
-                        window.location.href = e.target.closest('a').href; // Lädt die neue Seite vollständig
-                    }
-                });
-            </script>
+
 		</f:then>
 		<f:else>
 

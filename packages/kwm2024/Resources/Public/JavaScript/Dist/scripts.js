@@ -4,6 +4,8 @@
  * Licensed under the GPL-2.0-or-later license
  */
 console.log("WE LOVE TYPO3");
+
+//banner slider
 const maskSwiper = new Swiper('.mask-swiper', {
     // Optional parameters
 
@@ -29,10 +31,9 @@ const maskSwiper = new Swiper('.mask-swiper', {
     effect: 'slide',
 
 
-
 });
 
-
+//news slider
 const newsSwiper = new Swiper('.news-swiper', {
     loop: true,
     pagination: {
@@ -50,5 +51,44 @@ const newsSwiper = new Swiper('.news-swiper', {
 });
 
 
+//switch between article
+document.addEventListener('click', function (e) {
+    // Prüfen, ob der geklickte Link ein Vor-/Zurück-Link ist
+    if (e.target.closest('.news-prev a, .news-next a')) {
+        e.preventDefault(); // Verhindert den Standard-Link-Aufruf
+        window.location.href = e.target.closest('a').href; // Lädt die neue Seite vollständig
+    }
+});
+
+
+//gallery
+document.addEventListener("DOMContentLoaded", function () {
+    const accordions = document.querySelectorAll(".accordion-item");
+
+    accordions.forEach((accordion, index) => {
+        const smallImageLinks = accordion.querySelectorAll(".small-image-link");
+        const largeImage = accordion.querySelector(`#large-image-container-${index} img`);
+
+        smallImageLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Entferne die "active" Klasse von allen Bildern
+                smallImageLinks.forEach(img => img.classList.remove("active"));
+
+                // Setze die "active" Klasse für das aktuelle Bild
+                this.classList.add("active");
+
+                // Aktualisiere das große Bild
+                const newLargeImageSrc = this.getAttribute("data-large-image");
+                if (largeImage) {
+                    largeImage.src = newLargeImageSrc;
+                } else {
+                    console.error("Large image not found for index:", index);
+                }
+            });
+        });
+    });
+});
 
 

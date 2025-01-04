@@ -22,8 +22,8 @@
 .page-4 {
   .accordion-content-item.accordion-content-media {
     display: flex; // Flexbox-Layout
-    align-items: stretch; // Vertikale Dehnung
-    justify-content: stretch; // Horizontale Dehnung
+    //align-items: stretch; // Vertikale Dehnung
+    //justify-content: stretch; // Horizontale Dehnung
 
     .gallery-row,
     .gallery-item.gallery-item-size-2 {
@@ -70,6 +70,35 @@
   transition: border-color 0.3s ease;
 }
 
-.thumbnail.active {
+.thumbnail .active {
   border-color: #007bff;
+}
+
+.large-image {
+  margin-top: 30px;
+  width: 600px;
+  height: 550px;
+  border-radius: 10px;
+}
+
+.large-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.small-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.small-image-link.active .small-image {
+  border: 6px solid $tertiary;
+  border-radius: 10px;
+}
+
+.small-image-container {
+  display: flex;
+  justify-content: left;
 }

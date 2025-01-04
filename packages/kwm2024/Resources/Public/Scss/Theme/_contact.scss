@@ -18,28 +18,7 @@
   justify-content: center;
 }
 
-.btn-custom {
-  border: none; /* Entfernt den Rahmen des Buttons */
-  background-color: transparent; /* Entfernt die Hintergrundfarbe */
-  text-decoration: underline; /* Unterstreicht den Text entfernen */
-  gap: 8px; /* Abstand zwischen Text und Pfeil */
-  cursor: pointer;
-  color: #000; /* Schwarze Textfarbe */
-}
 
-.btn-custom:hover {
-  color: $secondary; /* Hover-Farbe für Text */
-}
-
-.btn-custom i {
-  border: 2px solid #000; /* Dickeren Kreisrand */
-  border-radius: 50%; /* Kreisig machen */
-  padding: 4px; /* Inneren Abstand des Kreises */
-}
-
-.btn-custom:hover i{
-  border-color: $secondary;
-}
 
 
 

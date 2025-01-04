@@ -58,9 +58,10 @@
         </f:if>
 
         <div>
-            <f:form.submit class = "logoutSubmit" value="{f:translate(key: 'login')}" name="submit"/>
+            <button type="submit" class="logoutSubmit btn-custom" name="submit">
+                <f:translate key="login" /> <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-
         <div class="felogin-hidden">
             <f:form.hidden name="logintype" value="login"/>
             <f:if condition="{redirectURL}!=''">

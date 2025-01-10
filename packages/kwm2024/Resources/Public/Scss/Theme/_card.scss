@@ -1,42 +1,53 @@
-
 .news .card {
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* Damit die Inhalte vertikal gestapelt werden */
+  justify-content: flex-start; /* Startet die Inhalte von oben */
+  align-items: stretch; /* Sorgt dafür, dass alle Kinder die volle Breite einnehmen */
   text-align: center;
-  padding: 20px;
+  padding: 0; /* Entferne das Padding */
   box-shadow: 1.5px 5px 6.5px rgba(0, 0, 0, 0.39);
   border: 0;
   border-radius: 10px;
   height: 300px;
   width: 400px;
   margin-bottom: 10px;
+  overflow: hidden; /* Schneidet überstehende Inhalte ab */
+}
 
-  .card-title {
-    font-weight: bold;
-    text-align: center;
+.news .card .news-img-wrap {
+  width: 100%; /* Nimmt die volle Breite der Card ein */
+  margin: 0; /* Entfernt unnötige Ränder */
+  display: block; /* Sicherstellen, dass es ein Block-Element ist */
+}
 
-  }
+.news .card .news-img-wrap img {
+  width: 100%; /* Stellt sicher, dass das Bild die gesamte Breite einnimmt */
+  height: 120px; /* Erhält das Seitenverhältnis */
+  object-fit: cover; /* Schneidet das Bild zu, wenn es nicht passt */
+  display: block; /* Entfernt Abstände durch Inline-Eigenschaften */
+}
+
+.news .card .header {
+  text-align: center;
+  padding: 10px 15px; /* Polsterung für den Text */
+}
+
+.news .card .header span {
+  color: $color_black;
+  text-decoration: underline $color_black;
+}
+
+.news .card .header span:hover {
+  color: $secondary;
+  text-decoration: underline $secondary;
 }
 
 .news .more {
-  color: black !important;
+  color: $color_black !important;
   background-color: $primary;
   padding: 10px 30px;
   border-radius: 10px;
   text-decoration: none;
-
-
-}
-
-.news .card .news-img-wrap {
-  width: 100%; /* Stellt sicher, dass es die gesamte Breite der Card einnimmt */
-  display: block; /* Falls notwendig, um es als Block-Element zu setzen */
-}
-
-.news .card .news-img-wrap img {
-  width: 100%; /* Das Bild füllt die Breite des Wrappers */
-  height: 120px; /* Beibehaltung des Seitenverhältnisses */
-
 }
 
 .news .more:hover {

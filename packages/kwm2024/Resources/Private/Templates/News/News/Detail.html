@@ -59,13 +59,14 @@
 			</div>
 			<div class="footer">
 				<p>
-					<!-- date -->
+					<f:comment> not in Design but useful
 					<span class="news-list-date">
 						<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
 							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
 						</time>
 					</span>
-
+                        
+                    </f:comment>
 					<f:if condition="{newsItem.categories}">
 						<f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
 					</f:if>
@@ -117,18 +118,18 @@
                     <ul class="news-navigation">
                         <!-- Zurück (erster verwandter Artikel) -->
                         <f:if condition="{newsItem.relatedSorted.0}">
-                            <li class="news-prev">
+                            <li class="news-prev news-link">
                                 <n:link newsItem="{newsItem.relatedSorted.0}" settings="{settings}">
-                                    <span aria-hidden="true">&larr; </span>{newsItem.relatedSorted.0.title}
+                                    <i aria-hidden="true" class="fas fa-chevron-left btn-custom"></i>{newsItem.relatedSorted.0.title}
                                 </n:link>
                             </li>
                         </f:if>
 
                         <!-- Weiter (zweiter verwandter Artikel) -->
                         <f:if condition="{newsItem.relatedSorted.1}">
-                            <li class="news-next">
+                            <li class="news-next news-link">
                                 <n:link newsItem="{newsItem.relatedSorted.1}" settings="{settings}">
-                                    {newsItem.relatedSorted.1.title} <span aria-hidden="true">&rarr;</span>
+                                    {newsItem.relatedSorted.1.title} <i aria-hidden="true" class="fas fa-chevron-right btn-custom"></i>
                                 </n:link>
                             </li>
                         </f:if>

@@ -1,19 +1,21 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
 
+<!-- Fortschrittsbalken -->
+<div class="contact-section">
+    <f:if condition="{form.formDefinition.pages}">
+        <f:variable name="totalPages" value="{form.formDefinition.pages -> f:count()}"/>
+        <f:variable name="currentPageIndex" value="{form.currentPage.index + 1}"/>
+        <f:variable name="progressPercentage" value="{(currentPageIndex / totalPages) * 100}" />
 
-<f:if condition="{form.formDefinition.pages}">
-    <f:variable name="totalPages" value="{form.formDefinition.pages -> f:count()}"/>
-    <f:variable name="currentPageIndex" value="{form.currentPage.index + 1}"/>
-    <f:variable name="progressPercentage" value="{currentPageIndex / totalPages * 100}"/>
-
-    <div class="progress mb-4" role="progressbar" aria-label="Form Progress"
-         aria-valuemin="0" aria-valuemax="100"
-         aria-valuenow="{progressPercentage -> f:format.number(decimals: 0)}">
-        <div class="progress-bar"
-             style="width: {progressPercentage -> f:format.number(decimals: 0)}%;">
-            {progressPercentage -> f:format.number(decimals: 0)}%
+        <div class="progress mb-4" role="progressbar" aria-label="Form Progress"
+             aria-valuemin="0" aria-valuemax="100"
+             aria-valuenow="{progressPercentage -> f:format.number(decimals: 0)}">
+            <div class="progress-bar"
+                 style="width: {progressPercentage -> f:format.number(decimals: 0)}%;">
+                {progressPercentage -> f:format.number(decimals: 0)}%
+            </div>
         </div>
-    </div>
-</f:if>
+    </f:if>
+</div>
 </html>

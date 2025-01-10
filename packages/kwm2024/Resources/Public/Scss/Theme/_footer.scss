@@ -48,9 +48,6 @@
   color: $tertiary;
 }
 
- .footer-section-meta {
-  display: none !important;
-}
 
 .logoutSubmit {
   background: none !important;
@@ -59,19 +56,4 @@
 
 }
 
-//Should change that - not ideal
-.footer-section h3 {
-  display: none !important;
 
-}
-
-//Should change that - not ideal
-.footer-section .footer-section-content-column-right p {
-  display: none !important;
-
-}
-
-//does not work
-.footer-section-content-column-right .frame-container {
-  justify-content: right !important;
-}

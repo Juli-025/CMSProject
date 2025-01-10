@@ -1,4 +1,6 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+
 <div class="form-container form-identifier-{form.formDefinition.identifier}">
     <formvh:renderRenderable renderable="{form}">
         <formvh:form
@@ -13,7 +15,12 @@
             additionalParams="{form.renderingOptions.additionalParams}"
             novalidate="1"
         >
+            <!-- Fortschrittsbalken rendern -->
+            <f:render partial="Form/ProgressBar" arguments="{form: form}" />
+
+            <!-- Aktuelle Seite rendern -->
             <f:render partial="{form.currentPage.templateName}" arguments="{page: form.currentPage}" />
+
             <div class="form-actions">
                 <f:render partial="Form/Navigation" arguments="{form: form}" />
             </div>

@@ -29,8 +29,6 @@ const maskSwiper = new Swiper('.mask-swiper', {
     centeredSlides: true,
 
     effect: 'slide',
-
-
 });
 
 //news slider
@@ -91,4 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const nav = document.querySelector('.navbar-nav');
+    const items = nav.querySelectorAll('.nav-item');
+    const totalWidth = Array.from(items).reduce((width, item) => {
+        return width + item.offsetWidth + 13;
+    }, 0);
+    nav.style.width = `${totalWidth}px`;
+});
 

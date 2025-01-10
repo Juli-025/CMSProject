@@ -14,12 +14,12 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 60px;
+  font-size: 64px;
   margin-top: -35px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -71,4 +71,22 @@ h2 {
 
 .btn-custom:hover i{
   border-color: $secondary;
+}
+
+.breadcrumb-section {
+  background-color: white;
+}
+
+.active .breadcrumb-text{
+  text-decoration: underline;
+}
+
+.breadcrumb-link {
+  color: var(--bs-breadcrumb-item-active-color);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.breadcrumb-link:hover {
+  color: $secondary;
 }

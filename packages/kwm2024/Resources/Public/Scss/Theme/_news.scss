@@ -49,7 +49,6 @@
 
 }
 
-
 .swiper-button-prev {
   left: 0; /* Links ausgerichtet */
 }
@@ -69,4 +68,31 @@
 
 .news .more:hover {
   background-color: $secondary;
+}
+
+.news-link a{
+  color: $color_black !important;
+  gap: 5px;
+}
+
+.news-link:hover a{
+  color: $secondary !important;
+}
+
+.news-link:hover .btn-custom {
+  color: $secondary !important;
+  border-color: $secondary;
+}
+
+.news-link i {
+  margin: 3px;
+  border: 2px solid $color_black; /* Kreisrand */
+  border-radius: 50%; /* Kreisig machen */
+  padding: 4px; /* Inneren Abstand des Kreises */
+  width: 25px;
+  height: 25px;
+}
+
+.gallery-item img {
+  border-radius: 10px;
 }

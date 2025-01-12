@@ -48,12 +48,63 @@
   color: $tertiary;
 }
 
+.logoutSubmit .fa-chevron-right {
+  border: none;
+}
+
+
+.logoutSubmit:hover {
+  color: $tertiary !important;
+}
 
 .logoutSubmit {
   background: none !important;
   box-shadow: none !important;
   border: none !important;
+  font-weight: bold;
 
 }
 
+// Styling für das Login-Formular
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 400px;
+  position: relative;
+}
+
+.login-form legend{
+  width: 30%;
+
+}
+
+.login-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login-label {
+  font-weight: bold;
+  margin-right: 10px;
+  flex-basis: 30%;
+  text-align: right;
+}
+
+.login-input {
+  flex-basis: 65%;
+}
+
+.login-submit-row {
+  justify-content: right;
+  align-self: flex-end;
+}
+
+.logoutFliedset .login-submit-row {
+  margin-top: 30px;
+}
 

@@ -4,13 +4,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/*main:first-child .element-header:nth-of-type(1) span {
-  font-weight: bold;
-  font-size: 60px;
-}
-.main-section .frame-header:first-child h2:first-child {
-
-}*/
 
 h1 {
   font-weight: bold;
@@ -25,23 +18,30 @@ h2 {
 
 
 //buttons from swiper
-.fa-arrow-left {
+.fa-chevron-right {
   border: 2px solid $color_black; /* Dickeren Kreisrand */
   border-radius: 50%; /* Kreisig machen */
   padding: 4px; /* Inneren Abstand des Kreises */
+  margin-right: 5px;
+  line-height: 0.87;
+  text-decoration: none !important;
 }
 
-.fa-arrow-right {
+
+.fa-chevron-left {
   border: 2px solid $color_black; /* Dickeren Kreisrand */
   border-radius: 50%; /* Kreisig machen */
   padding: 4px; /* Inneren Abstand des Kreises */
+  margin-left: 5px;
+  line-height: 0.87;
+  text-decoration: none !important;
 }
 
-.fa-arrow-left:hover {
+.fa-chevron-left:hover {
   border-color: $secondary;
 }
 
-.fa-arrow-right:hover {
+.fa-chevron-right:hover {
   border-color: $secondary;
 }
 
@@ -52,9 +52,9 @@ h2 {
   box-shadow: none !important;
   background-color: transparent; /* Entfernt die Hintergrundfarbe */
   text-decoration: underline; /* Unterstreicht den Text entfernen */
-  gap: 8px; /* Abstand zwischen Text und Pfeil */
   cursor: pointer;
   color: $color_black; /* Schwarze Textfarbe */
+
 }
 
 .btn-custom:hover {
@@ -89,4 +89,8 @@ h2 {
 
 .breadcrumb-link:hover {
   color: $secondary;
+}
+
+.img-border {
+  border-radius: 10px;
 }

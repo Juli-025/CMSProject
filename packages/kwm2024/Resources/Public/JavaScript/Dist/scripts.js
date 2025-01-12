@@ -33,19 +33,33 @@ const maskSwiper = new Swiper('.mask-swiper', {
 
 //news slider
 const newsSwiper = new Swiper('.news-swiper', {
-    loop: true,
+    loop: true, // Aktiviert das Schleifen von Slides
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        clickable: true, // Ermöglicht das Klicken auf die Pagination-Punkte
     },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
-    slidesPerView: 3,
-    centeredSlides: true,
+    // Standard-Einstellung: Zeigt 3 Slides an
+    slidesPerView: 1,
+    centeredSlides: true, // Zentriert die aktiven Slides
 
+    // Responsive Breakpoints
+    breakpoints: {
+        // Wenn die Fensterbreite >= 768px ist
+        768: {
+            slidesPerView: 2, // Zeigt 2 Slides an
+            spaceBetween: 20, // Abstand zwischen Slides
+        },
+        // Wenn die Fensterbreite >= 1024px ist
+        1024: {
+            slidesPerView: 3, // Zeigt 3 Slides an
+            spaceBetween: 30, // Größerer Abstand zwischen Slides
+        },
+    },
 });
 
 

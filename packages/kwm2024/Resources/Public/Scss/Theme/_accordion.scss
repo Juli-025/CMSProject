@@ -60,3 +60,31 @@
   justify-content: left;
 }
 
+// Existing large image styling
+.large-image {
+  margin-top: 30px;
+  width: 600px; // Default width for larger screens
+  height: 550px; // Default height for larger screens
+  border-radius: 10px;
+}
+
+// Container for large image
+.large-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+// Add media queries for responsiveness
+@media (max-width: 1024px) {
+  .large-image {
+    width: 500px; // Smaller width for medium screens
+    height: auto; // Maintain aspect ratio
+  }
+}
+
+@media (max-width: 768px) {
+  .large-image {
+    width: 100%; // Full width for smaller screens
+    height: auto; // Maintain aspect ratio
+  }
+}

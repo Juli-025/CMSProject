@@ -1,10 +1,10 @@
-
+//position of swiper news button
 .news .swiper-button-next {
-  right: -10px; /* Abstand vom rechten Rand des Containers */
+  right: -10px;
 }
 
 .news .swiper-button-prev {
-  left: -10px; /* Abstand vom linken Rand des Containers */
+  left: -10px;
 }
 
 .news .swiper-wrapper {
@@ -12,25 +12,6 @@
   justify-content: space-between;
 }
 
-.gallery-row {
-  display: flex;
-  flex-wrap: wrap;
-
-  .gallery-item {
-    flex: 1 1 auto; /* sorgt dafür, dass die Items flexibel in den Container passen */
-
-    .textpic-item {
-      display: flex;
-      flex-direction: column; /* Bild und Text in einer vertikalen Ausrichtung */
-      align-items: center;   /* Zentriert die Items vertikal */
-
-      .image {
-        max-width: 100%; /* Bild passt sich der Breite des Containers an */
-        height: auto;     /* hält das Seitenverhältnis des Bildes */
-      }
-    }
-  }
-}
 
 .news-navigation {
   display: flex;

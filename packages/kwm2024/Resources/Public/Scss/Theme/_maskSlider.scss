@@ -1,3 +1,4 @@
+//swiper image
 .swiper .swiper-slide-active {
   max-height: 320px;
 }
@@ -9,42 +10,41 @@
 
 }
 
+//swiper buttons
 .swiper-button-prev {
   --swiper-navigation-color: #000000;
   --swiper-navigation-size: 30px;
-  /*width: 75px; /* Durchmesser des Kreises
-  height: 65px;
-  border-radius: 50%; /* Macht das Element rund
-  border: 3px solid black; /* Optional: Rand */
-  border: 2px solid $color_black; /* Dickeren Kreisrand */
-  border-radius: 50%; /* Kreisig machen */
-  padding: 20px; /* Inneren Abstand des Kreises */
+  border: 2px solid $color_black;
+  border-radius: 50%;
+  padding: 20px;
   background-color: white;
 }
 
 .swiper-button-prev:hover {
   --swiper-navigation-color: #df7c38;
-  border: 2px solid $secondary; /* Dickeren Kreisrand */
+  border: 2px solid $secondary;
 }
 
 .swiper-button-next {
   --swiper-navigation-color: #000000;
   --swiper-navigation-size: 30px;
-  border: 2px solid $color_black; /* Dickeren Kreisrand */
-  border-radius: 50%; /* Kreisig machen */
-  padding: 20px; /* Inneren Abstand des Kreises */
+  border: 2px solid $color_black;
+  border-radius: 50%;
+  padding: 20px;
   background-color: white;
 }
 
 .swiper-button-next:hover {
   --swiper-navigation-color: #df7c38;
-  border: 2px solid $secondary; /* Dickeren Kreisrand */
+  border: 2px solid $secondary;
 }
 
+//pagination swiper
 .swiper-pagination {
   --swiper-pagination-color: #000000;
 }
 
+//active pagination element
 .swiper-pagination-bullet:hover {
   --swiper-pagination-color: #df7c38;
 }

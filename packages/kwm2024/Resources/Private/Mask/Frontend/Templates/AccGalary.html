@@ -1,8 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
 <f:section name="Main">
+    <!-- Check if the accordion data (tx_mask_item) exists -->
     <f:if condition="{data.tx_mask_item}">
+        <!-- Accordion Container -->
         <div class="accordion" id="accordion-{data.uid}">
+            <!-- Loop through each accordion item -->
             <f:for each="{data.tx_mask_item}" as="data_item" iteration="iteration">
                 <div class="accordion-item">
                     <!-- Accordion Header -->
@@ -14,6 +17,7 @@
                             data-bs-target="#accordion-{data.uid}-{iteration.index}"
                             aria-expanded="{f:if(condition: iteration.isFirst, then: 'true', else: 'false')}"
                             aria-controls="accordion-{data.uid}-{iteration.index}">
+                            <!-- Display the title of the accordion item if it exists -->
                             <f:if condition="{data_item.tx_mask_title}">
                                 {data_item.tx_mask_title}
                             </f:if>
@@ -30,14 +34,14 @@
                             <div class="container">
                                 <div class="row mb-4">
 
-                                    <!-- Text -->
+                                    <!-- Text Content -->
                                     <f:if condition="{data_item.tx_mask_text_img}">
                                         <div class="col-12">
                                             <p>{data_item.tx_mask_text_img -> f:format.html()}</p>
                                         </div>
                                     </f:if>
 
-                                    <!-- Small Images in Grid -->
+                                    <!-- Small Images in a Grid -->
                                     <div class="col-12">
                                         <div class="row small-image-container text-center">
                                             <f:for each="{data_item.tx_mask_small_img}" as="file" iteration="imgIteration">
@@ -52,10 +56,10 @@
                                         </div>
                                     </div>
 
-
                                     <!-- Large Image -->
                                     <div class="col-12 mb-3">
                                         <div id="large-image-container-{iteration.index}" class="large-image-container">
+                                            <!-- Display the first image as the large image -->
                                             <f:if condition="{data_item.tx_mask_small_img}">
                                                 <f:for each="{data_item.tx_mask_small_img}" as="file" iteration="imgIteration">
                                                     <f:if condition="{imgIteration.isFirst}">
@@ -73,6 +77,5 @@
             </f:for>
         </div>
     </f:if>
-
 </f:section>
 </html>

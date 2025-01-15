@@ -1,3 +1,4 @@
+//nav items active inactive
 .navactive {
   font-weight: bold;
   color: $color_black;
@@ -11,50 +12,55 @@
 
 }
 
+//navbar
 .navbar-nav {
-  margin: 0; /* Entfernt äußere Abstände */
+  margin: 0;
   background-color: $primary;
   border-radius: 10px;
-  padding: 0 10px; /* Horizontaler Abstand innerhalb der Navbar */
+  padding: 0 10px;
   padding-right: 20px;
-  display: flex; /* Aktiviert Flexbox */
-  gap: 10px; /* Abstand zwischen den Navigationselementen */
-  align-items: center; /* Vertikale Ausrichtung */
-  justify-content: flex-start; /* Inhalte linksbündig ausrichten */
-  max-width: 100%; /* Breite dynamisch anpassen */
+  display: flex;
+  gap: 10px; //gap between navitems
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
 }
 
+//nav item active
 .nav-item:has(.active) {
   background-color: $tertiary;
   border-radius: 10px;
 }
 
+//nav item hover
 .nav-item:hover {
   background-color: $secondary;
   border-radius: 10px;
 }
 
 .nav-item {
-  padding: 5px 15px; /* Polsterung der Navigationselemente */
+  padding: 5px 15px;
 }
 
 .header_nav a {
-  text-decoration: none; /* Entfernt die Unterstreichung von Links */
-  color: inherit; /* Beibehaltung der Schriftfarbe */
+  text-decoration: none;
+  color: inherit;
 }
 
+//navbar wrapper
 .navbar-wrapper {
-  display: flex; /* Aktiviert Flexbox */
-  justify-content: space-between; /* Elemente an gegenüberliegende Seiten schieben */
-  align-items: center; /* Zentriert vertikal */
-  width: 100%; /* Füllt die gesamte Breite */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
+//language navigation
 .language-navigation {
-  display: flex; /* Aktiviert Flexbox */
-  gap: 5px; /* Abstand zwischen den Sprachelementen */
-  align-items: center; /* Zentriert vertikal */
-  justify-content: flex-end; /* Inhalte rechts ausrichten */
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 

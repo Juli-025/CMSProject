@@ -1,10 +1,10 @@
-
+//color of footer
 #page-footer section{
   background-color: $primary;
 }
 
+//logo of footer
 .footer-section .image {
-
     width: 190px;
     height: auto;
 }
@@ -16,25 +16,27 @@
   height: 100%; /* Sicherstellen, dass der Container die volle Höhe einnimmt */
 }
 
+//footer font color
 .footer-section .frame-inner {
   color: $color_black ;
-
 }
 
+//footer title bold
 .footer-section .element-header {
   font-weight: bold;
 }
 
 .footer-section legend {
   font-weight: bold;
-
 }
 
+//footer links and Impressum
 .footer-section strong {
   color: $color_black;
   text-decoration: underline;
 }
 
+//hover effect on links
 .footer-section strong:hover {
   color: $tertiary;
 }
@@ -48,10 +50,10 @@
   color: $tertiary;
 }
 
+//login from footer
 .logoutSubmit .fa-chevron-right {
   border: none;
 }
-
 
 .logoutSubmit:hover {
   color: $tertiary !important;
@@ -65,7 +67,7 @@
 
 }
 
-// Styling für das Login-Formular
+//styling for login inputfields
 .login-form {
   display: flex;
   flex-direction: column;
@@ -77,7 +79,6 @@
 
 .login-form legend{
   width: 30%;
-
 }
 
 .login-row {
@@ -88,6 +89,7 @@
   margin-bottom: 15px;
 }
 
+//lables of inputbox
 .login-label {
   font-weight: bold;
   margin-right: 10px;

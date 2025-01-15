@@ -1,22 +1,30 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
+
 <f:section name="Main">
+    <!-- Check if the slider data (tx_mask_slider) exists -->
     <f:if condition="{data.tx_mask_slider}">
+        <!-- Container for the Swiper slider -->
         <div class="swiper mask-swiper">
             <div class="swiper-wrapper">
+                <!-- Loop through each slider item -->
                 <f:for each="{data.tx_mask_slider}" as="data_item">
                     <div class="swiper-slide">
+                        <!-- Loop through each image in the current slider item -->
                         <f:for each="{data_item.tx_mask_img}" as="file">
+                            <!-- Render the image with specified dimensions -->
                             <f:media file="{file}" width="1280" heigth="320"/>
                         </f:for>
                     </div>
                 </f:for>
             </div>
 
-            <!-- If we need pagination -->
+            <!-- Swiper pagination element -->
             <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
+            <!-- Swiper navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
@@ -24,7 +32,3 @@
 </f:section>
 
 </html>
-
-
-
-

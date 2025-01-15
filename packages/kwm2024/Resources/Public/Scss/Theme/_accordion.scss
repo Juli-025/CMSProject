@@ -1,7 +1,9 @@
 .accordion-header {
   .accordion-button {
+    //title of element
     font-weight: bold;
 
+    //when acc is open
     &[aria-expanded="true"] {
       background-color: $primary;
       color: $color_black;
@@ -9,22 +11,24 @@
 
     &:hover,
     &:focus {
-      background: none; // Entfernt Hover- oder Fokus-Overlay
-      box-shadow: none; // Entfernt Fokus-Schatten
+      //delete origin effect on accordion
+      box-shadow: none;
       background-color: $primary;
     }
   }
 }
 
+//accordion border
 .accordion-item {
   border-color: $secondary;
 }
 
+//the image has rounded edges
 .page-4 .accordion-body .image img{
   border-radius: 10px
 }
 
-
+//large image styling
 .large-image {
   margin-top: 30px;
   width: 600px;
@@ -37,19 +41,21 @@
   justify-content: center;
 }
 
+//small image styling
 .small-image {
   width: 150px;
   height: 150px;
   border-radius: 10px;
   margin-top: 15px;
-
 }
 
+//highlight when small image is active
 .small-image-link.active .small-image {
   border: 6px solid $tertiary;
   border-radius: 10px;
 }
 
+//position of small images
 .small-image-container {
   justify-content: left;
 }

@@ -5,75 +5,72 @@
  */
 console.log("WE LOVE TYPO3");
 
-//banner slider
+// Banner slider
 const maskSwiper = new Swiper('.mask-swiper', {
     // Optional parameters
-
-    loop: true,
+    loop: true, // Enables looping of slides
 
     // If we need pagination
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination', // Pagination element
     },
 
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next', // Button to go to the next slide
+        prevEl: '.swiper-button-prev', // Button to go to the previous slide
     },
 
     autoplay: {
-        delay: 10000,
+        delay: 10000, // Auto-advance delay in milliseconds
     },
 
-    centeredSlides: true,
+    centeredSlides: true, // Centers the active slides
 
-    effect: 'slide',
+    effect: 'slide', // Transition effect
 });
 
-//news slider
+// News slider
 const newsSwiper = new Swiper('.news-swiper', {
-    loop: true, // Aktiviert das Schleifen von Slides
+    loop: true, // Enables looping of slides
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true, // Ermöglicht das Klicken auf die Pagination-Punkte
+        el: '.swiper-pagination', // Pagination element
+        clickable: true, // Allows clicking on pagination dots
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next', // Button to go to the next slide
+        prevEl: '.swiper-button-prev', // Button to go to the previous slide
     },
 
-    // Standard-Einstellung: Zeigt 3 Slides an
+    // Default settings: displays 1 slide
     slidesPerView: 1,
-    centeredSlides: true, // Zentriert die aktiven Slides
+    centeredSlides: true, // Centers the active slides
 
-    // Responsive Breakpoints
+    // Responsive breakpoints
     breakpoints: {
-        // Wenn die Fensterbreite >= 768px ist
+        // When the viewport width is >= 768px
         768: {
-            slidesPerView: 2, // Zeigt 2 Slides an
-            spaceBetween: 20, // Abstand zwischen Slides
+            slidesPerView: 2, // Displays 2 slides
+            spaceBetween: 20, // Spacing between slides in pixels
         },
-        // Wenn die Fensterbreite >= 1024px ist
+        // When the viewport width is >= 1024px
         1024: {
-            slidesPerView: 3, // Zeigt 3 Slides an
-            spaceBetween: 30, // Größerer Abstand zwischen Slides
+            slidesPerView: 3, // Displays 3 slides
+            spaceBetween: 30, // Larger spacing between slides
         },
     },
 });
 
-
-//switch between article
+// Switch between articles
 document.addEventListener('click', function (e) {
-    // Prüfen, ob der geklickte Link ein Vor-/Zurück-Link ist
+    // Check if the clicked link is a "previous" or "next" link
     if (e.target.closest('.news-prev a, .news-next a')) {
-        e.preventDefault(); // Verhindert den Standard-Link-Aufruf
-        window.location.href = e.target.closest('a').href; // Lädt die neue Seite vollständig
+        e.preventDefault(); // Prevent the default link behavior
+        window.location.href = e.target.closest('a').href; // Fully load the new page
     }
 });
 
-
-//gallery
+// Gallery functionality
 document.addEventListener("DOMContentLoaded", function () {
     const accordions = document.querySelectorAll(".accordion-item");
 
@@ -83,15 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         smallImageLinks.forEach(link => {
             link.addEventListener("click", function (e) {
-                e.preventDefault();
+                e.preventDefault(); // Prevent default link behavior
 
-                // Entferne die "active" Klasse von allen Bildern
+                // Remove the "active" class from all images
                 smallImageLinks.forEach(img => img.classList.remove("active"));
 
-                // Setze die "active" Klasse für das aktuelle Bild
+                // Add the "active" class to the currently clicked image
                 this.classList.add("active");
 
-                // Aktualisiere das große Bild
+                // Update the large image
                 const newLargeImageSrc = this.getAttribute("data-large-image");
                 if (largeImage) {
                     largeImage.src = newLargeImageSrc;
@@ -103,12 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Navbar fitting size
 document.addEventListener("DOMContentLoaded", function() {
     const nav = document.querySelector('.navbar-nav');
     const items = nav.querySelectorAll('.nav-item');
     const totalWidth = Array.from(items).reduce((width, item) => {
-        return width + item.offsetWidth + 13;
+        return width + item.offsetWidth + 13; // Add up the width of all items with spacing
     }, 0);
-    nav.style.width = `${totalWidth}px`;
+    nav.style.width = `${totalWidth}px`; // Set the navbar width dynamically
 });
-

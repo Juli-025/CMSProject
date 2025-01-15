@@ -1,47 +1,55 @@
+//styling of the news cards
 .news .card {
   display: flex;
-  flex-direction: column; /* Damit die Inhalte vertikal gestapelt werden */
-  justify-content: flex-start; /* Startet die Inhalte von oben */
-  align-items: stretch; /* Sorgt dafür, dass alle Kinder die volle Breite einnehmen */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   text-align: center;
-  padding: 0; /* Entferne das Padding */
+  padding: 0;
   box-shadow: 1.5px 5px 6.5px rgba(0, 0, 0, 0.39);
   border: 0;
   border-radius: 10px;
   height: 300px;
   width: 400px;
   margin-bottom: 10px;
-  overflow: hidden; /* Schneidet überstehende Inhalte ab */
+  //too large elements are cut
+  overflow: hidden;
 }
 
+//styling of the news card img container
 .news .card .news-img-wrap {
-  width: 100%; /* Nimmt die volle Breite der Card ein */
-  margin: 0; /* Entfernt unnötige Ränder */
-  display: block; /* Sicherstellen, dass es ein Block-Element ist */
+  width: 100%;
+  margin: 0;
+  display: block;
 }
 
+//styling of the news card img
 .news .card .news-img-wrap img {
-  width: 100%; /* Stellt sicher, dass das Bild die gesamte Breite einnimmt */
-  height: 120px; /* Erhält das Seitenverhältnis */
-  object-fit: cover; /* Schneidet das Bild zu, wenn es nicht passt */
-  display: block; /* Entfernt Abstände durch Inline-Eigenschaften */
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
 }
 
+//header of the cards
 .news .card .header {
   text-align: center;
-  padding: 10px 15px; /* Polsterung für den Text */
+  padding: 10px 15px;
 }
 
+//text of the header
 .news .card .header span {
   color: $color_black;
   text-decoration: underline $color_black;
 }
 
+//if the text of the header is hovered
 .news .card .header span:hover {
   color: $secondary;
   text-decoration: underline $secondary;
 }
 
+//button of the card
 .news .more {
   color: $color_black !important;
   background-color: $primary;
@@ -50,6 +58,7 @@
   text-decoration: none;
 }
 
+//button hover
 .news .more:hover {
   background-color: $primary;
 }
@@ -57,6 +66,11 @@
 .row {
   display: flex;
   justify-content: space-between;
+
+}
+
+.news .swiper {
+  padding-right: 20px;
 }
 
 

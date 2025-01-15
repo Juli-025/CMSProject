@@ -1,18 +1,24 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<!-- Fortschrittsbalken -->
+<!-- Progress Bar Section -->
 <div class="contact-section">
+    <!-- Check if the form has pages -->
     <f:if condition="{form.formDefinition.pages}">
+        <!-- Calculate the total number of pages in the form -->
         <f:variable name="totalPages" value="{form.formDefinition.pages -> f:count()}"/>
+        <!-- Get the current page index (add 1 to make it 1-based instead of 0-based) -->
         <f:variable name="currentPageIndex" value="{form.currentPage.index + 1}"/>
+        <!-- Calculate the progress percentage -->
         <f:variable name="progressPercentage" value="{(currentPageIndex / totalPages) * 100}" />
 
+        <!-- Render the progress bar -->
         <div class="progress mb-4" role="progressbar" aria-label="Form Progress"
              aria-valuemin="0" aria-valuemax="100"
              aria-valuenow="{progressPercentage -> f:format.number(decimals: 0)}">
             <div class="progress-bar"
                  style="width: {progressPercentage -> f:format.number(decimals: 0)}%;">
+                <!-- Display the progress percentage inside the progress bar -->
                 {progressPercentage -> f:format.number(decimals: 0)}%
             </div>
         </div>

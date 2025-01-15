@@ -4,7 +4,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-
+//header
 h1 {
   font-weight: bold;
   font-size: 64px;
@@ -16,27 +16,26 @@ h2 {
   font-weight: bold;
 }
 
-
-//buttons from swiper
+//buttons
 .fa-chevron-right {
-  border: 2px solid $color_black; /* Dickeren Kreisrand */
-  border-radius: 50%; /* Kreisig machen */
-  padding: 4px; /* Inneren Abstand des Kreises */
+  border: 2px solid $color_black;
+  border-radius: 50%;
+  padding: 4px;
   margin-right: 5px;
   line-height: 0.87;
   text-decoration: none !important;
 }
 
-
 .fa-chevron-left {
-  border: 2px solid $color_black; /* Dickeren Kreisrand */
-  border-radius: 50%; /* Kreisig machen */
-  padding: 4px; /* Inneren Abstand des Kreises */
+  border: 2px solid $color_black;
+  border-radius: 50%;
+  padding: 4px;
   margin-left: 5px;
   line-height: 0.87;
   text-decoration: none !important;
 }
 
+//button hover
 .fa-chevron-left:hover {
   border-color: $secondary;
 }
@@ -48,12 +47,12 @@ h2 {
 //buttons in general
 .btn-custom {
   margin-top: 5px;
-  border: none; /* Entfernt den Rahmen des Buttons */
+  border: none;
   box-shadow: none !important;
-  background-color: transparent; /* Entfernt die Hintergrundfarbe */
-  text-decoration: underline; /* Unterstreicht den Text entfernen */
+  background-color: transparent;
+  text-decoration: underline;
   cursor: pointer;
-  color: $color_black; /* Schwarze Textfarbe */
+  color: $color_black;
 
 }
 

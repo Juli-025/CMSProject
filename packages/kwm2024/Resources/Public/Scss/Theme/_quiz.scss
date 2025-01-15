@@ -1,21 +1,71 @@
+//quiz delete border
 .tx-fp-masterquiz .card{
   border: none;
 }
 
+//quiz header
 .tx-fp-masterquiz .mx-auto h4{
   font-weight: bold;
 }
 
+//quiz buttons
 .quiz-question-buttons {
   padding-left: 20px;
 }
 
-
+// quiz radio buttons
+/* Stil für die Containerklasse des Radio-Buttons */
 .tx-fp-masterquiz .quiz-radiobox {
   margin-right: 20px;
   margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
 }
 
+/* Entferne den nativen Radio-Button (unsichtbar machen) */
+.tx-fp-masterquiz .quiz-radiobox input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none; /* Für Webkit-Browser */
+  position: relative;
+  width: 20px; /* Größe des Buttons */
+  height: 20px;
+  border: 2px solid #ccc; /* Standardumrandung */
+  border-radius: 50%; /* Rundes Design */
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Standardzustand des Radio-Buttons */
+.tx-fp-masterquiz .quiz-radiobox input[type="radio"]:not(:checked) {
+  background-color: white; /* Hintergrund */
+}
+
+/* Hover-Effekt */
+.tx-fp-masterquiz .quiz-radiobox input[type="radio"]:hover {
+  border-color: #ff9800; /* Orangefarbener Rand bei Hover */
+}
+
+/* Stil für ausgewählte Radio-Buttons */
+.tx-fp-masterquiz .quiz-radiobox input[type="radio"]:checked {
+  border-color: #ff9800; /* Orangefarbener Rand */
+  background-color: #ff9800; /* Orangefarbener Hintergrund */
+}
+
+/* Optional: Innerer Punkt für den ausgewählten Zustand */
+.tx-fp-masterquiz .quiz-radiobox input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 12px; /* Punktgröße */
+  height: 12px;
+  background-color: white; /* Punktfarbe */
+  border-radius: 50%;
+}
+
+
+//quiz progressbar
 .tx-fp-masterquiz .progress{
   margin-right: 150px;
   margin-left: 150px;
